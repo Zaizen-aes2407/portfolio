@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfolio</h1>
+        </header>
+        <section class="main-image">
+            <img src="path_to_your_image.jpg" alt="メイン画像">
+        </section>
+        <nav class="toc">
+            <h2>目次</h2>
+            <ol>
+                <li><a href="#self-introduction">自己紹介</a></li>
+                <li><a href="#research-introduction">研究紹介</a></li>
+                <li><a href="#works-introduction">作品紹介</a>
+                    <ol>
+                        <li><a href="#invisible-passage">Invisible Passage</a></li>
+                        <li><a href="#reversi">リバーシ</a></li>
+                    </ol>
+                </li>
+                <li><a href="#conclusion">おわりに</a></li>
+            </ol>
+        </nav>
+        <section id="self-introduction" class="content-section">
+            <h2>自己紹介</h2>
+            <ul>
+                <li>名前：財前 昂平(ザイゼン コウヘイ)</li>
+                <li>生年月日：2003年7月27日</li>
+                <li>主な開発言語 : Python、C♯、SQL、TeX</li>
+                <li>使用したことのある開発言語 : C、C++、Java、Haskell、HTML、CSS、JavaScript、VHDL、MATLAB、R</li>
+            </ul>
+        </section>
+        <section id="research-introduction" class="content-section">
+            <h2>研究紹介(使用言語：Python)</h2>
+            <p>&emsp;私の研究テーマは「SATの近似符号化における解網羅度の可変化」です。まずsat(充足可能性問題)とは、論理式に含まれる変数にfalseまたはtrueを割り当てることで論理式全体をtrueにできるかという問題です。この問題を応用することで様々な実問題を解決することができます。</p>
+            <p>&emsp;例えば、身近なところでは学校の時間割に応用できます。時間割を考える上では、「1人の教諭は同じ時間に別の教室で授業はできない」や「1つの教室で同じ時間に2つ以上の授業はできない(ダブルブッキングはダメ)」などの制約がありますよね。これを論理式にできれば、SATを用いて解くことができます。</p>
+            <P>&emsp;また、「1つの教室で同じ時間に2つ以上の授業はできない(ダブルブッキングはダメ)」の制約は，「1つの教室で同じ時間に授業できるのは高々1つの科目まで｣と言い換えることができます．これを論理式で表そうとすると，「trueとなる変数は高々K個まで」という制約を使うことになります。この制約をAt-Most-K制約といいます．</P>
+            <p>&emsp;私はこのAt-Most-K制約を論理式に変える方法の1つである近似符号化について研究しています。近似符号化は、AM制約を完璧に表現しない代わりに、計算量を大幅に抑えています。完璧に表現しないとは、本来のAM制約で得られるはずの答えが得られないということです。そこで、私の研究では計算量を抑ええつつも完璧な表現に近づけるようにしたい！ということを目標にやっています。具体的な研究結果としては、計算量を抑えながら少しは完璧な表現に近づきました。
+                詳しいことに関しては、研究論文を載せていますのでそちらを見ていただけると幸いです。
+            </p>
+            <a href="研究論文.pdf" target="_blank">研究論文.pdf</a>
+        </section>
+        <section id="works-introduction" class="content-section">
+            <h2>作品紹介</h2>
+            <p>ここでは過去に作った作品の中で、私の学びが多かったものを紹介します。紹介している作品以外に「ネットワークアナライザの開発」や「遠隔授業での出席確認方法また，そのときの生徒の健康状態の確認方法に関しての企画の考案」なども行っていました。</p>
+            <section id="invisible-passage" class="project-section">
+                <h3>Invisible Passage(使用言語：C#,使用ソフト：Unity)</h3>
+                <p>・ゲーム仕様<br>2人で協力して迷路を攻略しゲームクリアを目指すゲーム。プレイヤー1のキャラとプレイヤー2のキャラは動きが連動しており、話し合いを行いながらゲームクリアに向けて1歩1歩足を進めていく。しかし、プレイヤー1とプレイヤー2のマップは全く異なっており、プレイヤー1(プレイヤー2)はプレイヤー2(プレイヤー1)のマップを見ることはできない。また、どちらが死ぬとゲームオーバーになり、2人同時にマップをクリアしなければゲームクリアとはならない。</p>
+                <p>・ターゲットユーザ<br>小学生～中学生</p>
+                <p>・制作動機<br>クラス内でのゲーム制作コンペ(結果1位)</p>
+                <p>・制作人数<br>5人</p>
+                <p>・制作期間<br>1ヶ月</p>
+                <p>・担当<br>チームリーダー、プログラム、ゲームUI、デザイン</p>
+                <p>・苦労した点と解決法と学び<br>&emsp;どのようなゲームを作るかといったアイデア出しが最も困難であった。一人1つアイデアを持ち寄ろうとしても、在り来りなゲームばかりで面白みがない。しかし、普段どのようなゲームをしてるかなどの雑談を交えると、良いアイデアが浮かび上がったため、コミュニケーションの重要さを学ぶことができた。
+                <br>&emsp;また、コミュニケーションの重要さに関して、複数人での開発作業にも言える。ゲームの仕様が固まり、初めは順調に進んだが、それぞれが思う作品のイメージ(雰囲気や状況)がバラバラであったため、デザインに統一感が無かった。作業の遅れがでると予め考慮していたため実害は無かったが、仕様を固める際に、完成イメージの共有を行うことも考慮すべきと学んだ。</p>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="Invisible_image1.jpg" alt="Invisible Passage Image 1">
+                        <p>図1 top画面</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Invisible_image3.jpg" alt="Invisible Passage Image 2">
+                        <p>図2 レベル1プレイ画面1</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Invisible_image4.jpg" alt="Invisible Passage Image 3">
+                        <p>図3 レベル1プレイ画面2</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Invisible_image5.jpg" alt="Invisible Passage Image 4">
+                        <p>図4 レベル3プレイ画面</p>
+                    </div>
+                </div>
+            </section>
+            <section id="reversi" class="project-section">
+                <h3>リバーシ(使用言語：C++,使用ソフト：Visual Studio)</h3>
+                <p>・ゲーム仕様<br>2人で対戦のできるリバーシでもあり、1人でもできるようにCPU戦も兼ね備えたリバーシでもある。</p>
+                <p>・ターゲットユーザ<br>リバーシの好きなユーザ、大人から子供まで</p>
+                <p>・制作動機<br>初めてプログラムを学び、自分の実力を試す形で作成</p>
+                <p>・制作人数<br>1人</p>
+                <p>・制作期間<br>2ヶ月</p>
+                <p>・苦労した点と解決法と学び<br>&emsp;初めてのゲーム制作で全てにおいて苦労したが最も苦労したのはコマがどこに置けるかの判定であった。インターネットや書籍などで基礎的な部分を補いつつ、試行錯誤しながらアルゴリズムを考えた。この開発でプログラミングの基礎やその楽しさを学ぶことができた。
+                <br>&emsp;また、デバッグの難しさに直面することもあった。自分でデバッグを行うと自分の思いつく限りしかテストができないためであると感じ、友人にプレイしてもらうことで完璧なゲームへと仕上げることができた。デバッグが完璧でなければ製品として提供できないことを感じ、デバッグの重要さを学ぶことが出来た。</p>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="Reversi_image1.jpg" alt="リバーシ Image 1">
+                        <p>図1 top画面1</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Reversi_image3.jpg" alt="リバーシ Image 2">
+                        <p>図2 top画面2</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Reversi_image4.jpg" alt="リバーシ Image 3">
+                        <p>図3 プレイ画面1</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="Reversi_image2.jpg" alt="リバーシ Image 4">
+                        <p>図4 プレイ画面2</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="conclusion" class="content-section">
+            <h2>終わりに</h2>
+            <p>最後までご覧いただき、ありがとうございました。このポートフォリオを通じて、私のこれまでの経験やスキル、そして情熱をお伝えすることができたら幸いです。これからも成長し続け、新たな挑戦に向かって進んでまいります。今後ともよろしくお願い申し上げます。</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 財前 昂平. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
